@@ -6,7 +6,7 @@
     <form>
         <script language="javascript" type="text/javascript">
             function A(){
-                var Days = 1;
+                var Days = 30;
                 var exp = new Date();
                 exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
                 document.cookie = "Level1" + "=" + "A" + ";expires=" + exp.toGMTString() + ";path:/";
@@ -19,6 +19,17 @@
                 window.open("about:blank","_self").close();
             }
             function B(){
+                var Days = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = "Level1" + "=" + "B" + ";expires=" + exp.toGMTString() + ";path:/";
+                window.open('./Level1-A.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
                 window.open('./Level1-B.html');
                 window.opener = "test";
                 window.close();
@@ -28,6 +39,17 @@
                 window.open("about:blank","_self").close();
             }
             function C(){
+                var Days = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = "Level1" + "=" + "C" + ";expires=" + exp.toGMTString() + ";path:/";
+                window.open('./Level1-A.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
                 window.open('./Level1-C.html');
                 window.opener = "test";
                 window.close();
@@ -37,6 +59,17 @@
                 window.open("about:blank","_self").close();
             }
             function D(){
+                var Days = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = "Level1" + "=" + "D" + ";expires=" + exp.toGMTString() + ";path:/";
+                window.open('./Level1-A.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
                 window.open('./Level1-D.html');
                 window.opener = "test";
                 window.close();
