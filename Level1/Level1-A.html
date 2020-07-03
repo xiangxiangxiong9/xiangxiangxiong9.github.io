@@ -45,16 +45,16 @@
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
                 document.title = cookie_val;
-                document.getElementById("text").innerHTML = "新内容";
+                document.getElementById("text").innerHTML = "你选择了一个错误的答案";
             }else{
                 if (cookie_val = 'B'){
-                    document.getElementById("A");
+                    document.getElementById("text").innerHTML = "你选择的是B，但是你为什么要来A页？";
                 }else{
                     if (cookie_val = 'C'){
-                        document.getElementById("A");
+                        document.getElementById("text").innerHTML = "你选择的是C，但是你为什么要来A页？";
                     }else{
                         if (cookie_val = 'D'){
-                            document.getElementById("A");
+                            document.getElementById("text").innerHTML = "你选择的是D，但是你为什么要来A页？";
                         }else{
                             document.title = cookie_val;
                         }
