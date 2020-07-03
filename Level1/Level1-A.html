@@ -43,10 +43,10 @@
             }
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
-                document.getElementById("A").style.display="block";
-                document.getElementById("B").style.display="none";
-                document.getElementById("C").style.display="none";
-                document.getElementById("D").style.display="none";
+                document.getElementById("A").style.visibility = "none";
+                document.getElementById("B").style.visibility = "hidden";
+                document.getElementById("C").style.visibility = "hidden";
+                document.getElementById("D").style.visibility = "hidden";
             }else{
                 if (cookie_val = 'B'){
                     document.getElementById("A");
