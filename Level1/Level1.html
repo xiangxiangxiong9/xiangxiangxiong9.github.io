@@ -4,18 +4,62 @@
 </head>
 <boby>
     <form>
+        <script language="javascript" type="text/javascript">
+            function setCookie(c_name,value,expireday){
+                var exdate = new Date()
+                exdate.setDate(exdate.getDate + expireday);
+                document.cookie = c_name + "=" + escape(value) + ((expireday==null) ? "" : ";expires="+exdate.toGMTString());
+            }
+            function A(){
+                setCookie(Level1,A)
+                window.open('./Level1-A.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
+            }
+            function B(){
+                window.open('./Level1-B.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
+            }
+            function C(){
+                window.open('./Level1-C.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
+            }
+            function D(){
+                window.open('./Level1-D.html');
+                window.opener = "test";
+                window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                window.open("about:blank","_self").close();
+            }
+        </script>
         <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>
         <div align='left' style="position:relative;top:10px">
-            <button type="button" onclick="javascript:window.location.href='./Level1-A.html'">A. 《狂人日记》是老舍写的</button>
+            <button type="button" onclick="A()">A. 《狂人日记》是老舍写的</button>
         </div>
         <div align='left' style="position:relative;top:15px">
-            <button type="button" onclick="javascript:window.location.href='./Level1-B.html'">B. 腐竹Malajis没有正版</button>
+            <button type="button" onclick="B()">B. 腐竹Malajis没有正版</button>
         </div>
-         <div align='left' style="position:relative;top:20px">
-            <button type="button" onclick="javascript:window.location.href='./Level1-C.html'">C. Minecraft成立于1978年</button>
+        <div align='left' style="position:relative;top:20px">
+            <button type="button" onclick="C()">C. Minecraft成立于1978年</button>
         </div>
-            <div align='left' style="position:relative;top:25px">
-            <button type="button" onclick="javascript:window.location.href='./Level1-D.html'">D. 以上都不对</button>
+        <div align='left' style="position:relative;top:25px">
+            <button type="button" onclick="D()">D. 以上都不对</button>
         </div>>
     </form>
 </boby>
