@@ -43,23 +43,28 @@
             }
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
-               var a1 = document.getElementById("A");
-               var b1 = document.getElementById("B");
-               var c1 = document.getElementById("C");
-               var d1 = document.getElementById("D");
-               a1.style.display='block';
-               b1.style.display='none';
-               c1.style.display='none';
-               d1.style.display='none';
+                document.getElementById("A").style.display="block";
+                document.getElementById("B").style.display="none";
+                document.getElementById("C").style.display="none";
+                document.getElementById("D").style.display="none";
             }else{
                 if (cookie_val = 'B'){
-                    
+                    document.getElementById("A");
+                    document.getElementById("B");
+                    document.getElementById("C");
+                    document.getElementById("D");
                 }else{
                     if (cookie_val = 'C'){
-                        
+                        document.getElementById("A");
+                        document.getElementById("B");
+                        document.getElementById("C");
+                        document.getElementById("D");
                     }else{
                         if (cookie_val = 'D'){
-                            
+                            document.getElementById("A");
+                            document.getElementById("B");
+                            document.getElementById("C");
+                            document.getElementById("D");
                         }else{
                             document.title = cookie_val;
                         }
@@ -67,23 +72,17 @@
                 }
         }
         </script>
-        if (cookie_val = 'A'){
+        <div id="A">
             <a>你选择了一个错误的选项</a>
-        }else{
-            if (cookie_val = 'B'){
-                <b>你选择的不是B吗？怎么跑A的页面来了？</b>
-            }else{
-                if (cookie_val = 'C'){
-                    <c>你选择的不是C吗？怎么跑A的页面来了？</c>
-                }else{
-                    if(cookie_val = 'D'){
-                        <d>你选择的不是D吗？怎么跑A的页面来了？</d>
-                    }else{
-                        <err>无法获取指定项目</err>
-                    }
-                }
-            }
-        }
-        
+        </div>
+        <div id="B">
+            <b>你选择的不是B吗？怎么跑A的页面来了？</b>
+        </div>
+        <div id="C">
+            <b>你选择的不是C吗？怎么跑A的页面来了？</b>
+        </div>
+        <div id="D">
+            <b>你选择的不是D吗？怎么跑A的页面来了？</b>
+        </div>
     </form>
 </boby>
