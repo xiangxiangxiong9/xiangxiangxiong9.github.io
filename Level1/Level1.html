@@ -5,13 +5,13 @@
 <boby>
     <form>
         <script language="javascript" type="text/javascript">
-            function setCookie(c_name,value,expireday){
+            function setCookie(name,value,expireday){
                 var exdate = new Date()
                 exdate.setDate(exdate.getDate + expireday);
-                document.cookie = c_name + "=" + escape(value) + ((expireday==null) ? "" : ";expires="+exdate.toGMTString());
+                document.cookie = name + "=" + escape(value) + ((expireday==null) ? "" : ";expires="+exdate.toGMTString());
             }
             function A(){
-                setCookie(Level1,A)
+                setCookie(Level1,A,2147483647)
                 window.open('./Level1-A.html');
                 window.opener = "test";
                 window.close();
