@@ -6,10 +6,10 @@
     <form>
         <script language="javascript" type="text/javascript">
             function A(){
-                //var Days = 30;
-                //var exp = new Date();
-                //exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = 'Level1=A;path=/';
+                var Days = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = 'Level1=A;path=/'+ ';expires=' + exp.toGMTString();
                 window.open('./Level1-A.html');
                 window.opener = "test";
                 window.close();
