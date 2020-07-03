@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>答题</title>
+</head>
+<body>
+    <form>
+        <script language="javascript" type="text/javascript">
+            function getCookie(objName) {//获取指定名称的cookie的值
+                var arrStr = document.cookie.split("; ");
+                for (var i = 0; i < arrStr.length; i++) {
+                    var temp = arrStr[i].split("=");
+                    if (temp[0] == objName) {
+                        return decodeURI(temp[1]);
+                        document.title= decodeURI(temp[1])
+                    }
+                }
+            }
+            getcookie(Level1)
+        </script>
+    </form>
+</body>
