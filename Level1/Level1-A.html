@@ -43,40 +43,23 @@
             }
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
-                $('#A').show();
-                $('#B').hide();
-                $('#C').hide();
-                $('#D').hide();
+               var a1 = document.getElementById("A");
+               var b1 = document.getElementById("B");
+               var c1 = document.getElementById("C");
+               var d1 = document.getElementById("D");
+               a1.style.display='block';
+               b1.style.display='none';
+               c1.style.display='none';
+               d1.style.display='none';
             }else{
                 if (cookie_val = 'B'){
-                    var A =document.getElementById("A");
-                    A.style.visibility="hiddle";
-                    var B =document.getElementById("B");
-                    B.style.visibility="visible";
-                    var C =document.getElementById("C");
-                    C.style.visibility="hiddle";
-                    var D =document.getElementById("D");
-                    D.style.visibility="hiddle";
+                    
                 }else{
                     if (cookie_val = 'C'){
-                        var A =document.getElementById("A");
-                        A.style.visibility="hiddle";
-                        var B =document.getElementById("B");
-                        B.style.visibility="hiddle";
-                        var C =document.getElementById("C");
-                        C.style.visibility="visible";
-                        var D =document.getElementById("D");
-                        D.style.visibility="hiddle";
+                        
                     }else{
                         if (cookie_val = 'D'){
-                            var A =document.getElementById("A");
-                            A.style.visibility="hiddle";
-                            var B =document.getElementById("B");
-                            B.style.visibility="hiddle";
-                            var C =document.getElementById("C");
-                            C.style.visibility="hiddle";
-                            var D =document.getElementById("D");
-                            D.style.visibility="visible";
+                            
                         }else{
                             document.title = cookie_val;
                         }
