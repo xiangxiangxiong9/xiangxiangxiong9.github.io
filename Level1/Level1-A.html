@@ -43,14 +43,10 @@
             }
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
-                var A =document.getElementById("A");
-                A.style.visibility="visiable";
-                var B =document.getElementById("B");
-                B.style.visibility="hiddle";
-                var C =document.getElementById("C");
-                C.style.visibility="hiddle";
-                var D =document.getElementById("D");
-                D.style.visibility="hiddle";
+                $('#A').show();
+                $('#B').hide();
+                $('#C').hide();
+                $('#D').hide();
             }else{
                 if (cookie_val = 'B'){
                     var A =document.getElementById("A");
@@ -88,16 +84,16 @@
                 }
         }
         </script>
-        <div id="A" display="">
+        <div id="A">
             <a>你选择了一个错误的选项</a>
         </div>
-        <div id="B" display="">
+        <div id="B">
             <b>你选择的不是B吗？怎么跑A的页面来了？</b>
         </div>
-        <div id="C" display="">
+        <div id="C">
             <b>你选择的不是C吗？怎么跑A的页面来了？</b>
         </div>
-        <div id="D" display="">
+        <div id="D">
             <b>你选择的不是D吗？怎么跑A的页面来了？</b>
         </div>
     </form>
