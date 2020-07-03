@@ -44,28 +44,16 @@
             var cookie_val = getCookie("Level1");
             if (cookie_val = 'A'){
                 document.title = cookie_val;
-                document.getElementById("A").style.visibility = "none";
-                document.getElementById("B").style.visibility = "hidden";
-                document.getElementById("C").style.visibility = "hidden";
-                document.getElementById("D").style.visibility = "hidden";
+                document.getElementById("text").innerHTML = "新内容";
             }else{
                 if (cookie_val = 'B'){
                     document.getElementById("A");
-                    document.getElementById("B");
-                    document.getElementById("C");
-                    document.getElementById("D");
                 }else{
                     if (cookie_val = 'C'){
                         document.getElementById("A");
-                        document.getElementById("B");
-                        document.getElementById("C");
-                        document.getElementById("D");
                     }else{
                         if (cookie_val = 'D'){
                             document.getElementById("A");
-                            document.getElementById("B");
-                            document.getElementById("C");
-                            document.getElementById("D");
                         }else{
                             document.title = cookie_val;
                         }
@@ -73,9 +61,6 @@
                 }
         }
         </script>
-        <div id="A">你选择了一个错误的选项</div>
-        <div id="B">你选择的不是B吗？怎么跑A的页面来了？</div>
-        <div id="C">你选择的不是C吗？怎么跑A的页面来了？</div>
-        <div id="D">你选择的不是D吗？怎么跑A的页面来了？</div>
+        <div id="text"></div>
     </form>
 </boby>
