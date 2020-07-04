@@ -7,43 +7,44 @@
         <a id="text"></a>
         <script src="/js/NO_RIGHT_MOUSE_KEY.js"></script>
         <script src="/js/NO_CTRL_SHIFT_C_F12.js"></script>
-        <script src="/js/cookie-read.js" src="/js/cookie-save.js"></script>
+        <script src="/js/cookie-read.js"</script></script>
+        <script src="/js/cookie-save.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script language="javascript" type="text/javascript">
             var i=1
             function A(){
-                SaveCookie('1','A')
-                clock('./Level1-A')
+                SaveCookie('1','A');
+                clock('./Level1-A');
             }
             function B(){
-                SaveCookie('1','B')
-                clock('./Level1-B')
+                SaveCookie('1','B');
+                clock('./Level1-B');
             }
             function C(){
-                SaveCookie('1','C')
-                clock('./Level1-C')
+                SaveCookie('1','C');
+                clock('./Level1-C');
             }
             function D(){
-                SaveCookie('1','D')
-                clock('./Level1-D')
+                SaveCookie('1','D');
+                clock('./Level1-D');
             }
             
             var cookie_val = getCookie("Level1");
             if (cookie_val == 'A'){
-                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>"
-                clock('/Level1/Level1-' + cookie_val)
+                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
+                clock('/Level1/Level1-' + cookie_val);
             }
             if (cookie_val == 'B'){
-                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>"
-                clock('/Level1/Level1-' + cookie_val)
+                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
+                clock('/Level1/Level1-' + cookie_val);
             }
             if (cookie_val == 'C'){
-                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>"
-                clock('/Level1/Level1-' + cookie_val)
+                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
+                clock('/Level1/Level1-' + cookie_val);
             }
             if (cookie_val == 'D'){
-                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>"
-                clock('/Level1/Level1-' + cookie_val)
+                document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
+                clock('/Level1/Level1-' + cookie_val);
             }
         </script>
         <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>
