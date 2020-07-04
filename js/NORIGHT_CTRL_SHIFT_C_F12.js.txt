@@ -1,7 +1,7 @@
 function click(e) {
-    alert("谢绝右键!");
     if (document.all) {
-        if (event.button==2||event.button==3) { alert("awa");
+        if (event.button==2||event.button==3) {
+            alert("awa");
             oncontextmenu='return false';
         }
     }
@@ -17,16 +17,16 @@ if (document.layers) {
 document.onmousedown=click;
 document.oncontextmenu = new Function("return false;");
 document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-    if(window.event.keyCode == 12) { 
+    if(window.event.keyCode == 12) {
         window.event.returnValue=false;
-        return(false); 
+        return(false);
     } 
 }
 function FF(){
     location.reload();
 }
 function click(e) {
-    if (document.all) {if (event.button==2||event.button==3) { 
+    if (document.all) {if (event.button==2||event.button==3) {
             alert("awa");
             oncontextmenu='return false';
         }
@@ -47,6 +47,6 @@ document.onkeydown =document.onkeyup = document.onkeypress=function(){
     if(window.event.keyCode == 123 || window.event.keyCode == 16 || window.event.keyCode == 17 || window.event.keyCode == 67) { 
         FF();
     window.event.returnValue=false;
-    return(false); 
+    return(false);
     } 
 }
