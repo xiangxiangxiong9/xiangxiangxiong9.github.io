@@ -14,8 +14,12 @@ function clock1(To){
     }
 }
 function clock(To, time){
-    for(var i = time;i>0;i--){
-        setTimeout("",1000);
+    var sleep = function(time){
+        var startTime = new Date().getTime() + parseInt(time, 10);
+        while(new Date().getTime() < startTime){}
+    };
+    for(var i = time ;i>0 ;i--){
+        sleep(1000);
         console.log(i);
     }
 }
