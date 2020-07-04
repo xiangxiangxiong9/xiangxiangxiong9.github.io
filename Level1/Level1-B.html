@@ -3,34 +3,62 @@
     <title>回答错误</title>
 </head>
 <boby>
-    <span class="sh_symbol">&lt;</span>script<span class="sh_symbol">&gt;</span>
-    function click<span class="sh_symbol">(</span>e<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
-    <span class="sh_value">if</span> (<span class="sh_value">document.all</span>) {
-    <span class="sh_value">if</span> (<span class="sh_value">event.button</span>==<span class="sh_value">2</span>||<span class="sh_value">event.button</span>==<span class="sh_value">3</span>) { <span class="sh_value">alert</span>("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
-    <span class="sh_value">oncontextmenu</span>='<span class="sh_value">return</span> <span class="sh_value">false</span>';
-    <span class="sh_cbracket">}</span>
-    }
-    if <span class="sh_symbol">(</span>document<span class="sh_selector">.layers</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
-    <span class="sh_value">if</span> (<span class="sh_value">e.which</span> == <span class="sh_value">3</span>) {
-    <span class="sh_value">oncontextmenu</span>='<span class="sh_value">return</span> <span class="sh_value">false</span>';
-    <span class="sh_cbracket">}</span>
-    }
-    }
-    if <span class="sh_symbol">(</span>document<span class="sh_selector">.layers</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
-    <span class="sh_value">document.captureEvents</span>(<span class="sh_value">Event.MOUSEDOWN</span>);
-    <span class="sh_cbracket">}</span>
-    document<span class="sh_selector">.onmousedown</span><span class="sh_symbol">=</span>click<span class="sh_symbol">;</span>
-    document<span class="sh_selector">.oncontextmenu</span> <span class="sh_symbol">=</span> new Function<span class="sh_symbol">(</span>"return false<span class="sh_symbol">;</span>"<span class="sh_symbol">)</span>
-    document<span class="sh_selector">.onkeydown</span> <span class="sh_symbol">=</span>document<span class="sh_selector">.onkeyup</span> <span class="sh_symbol">=</span> document<span class="sh_selector">.onkeypress</span><span class="sh_symbol">=</span>function<span class="sh_symbol">()</span><span class="sh_cbracket">{</span> 
-    <span class="sh_value">if</span>(<span class="sh_value">window.event.keyCode</span> == <span class="sh_value">123</span>) { 
-    <span class="sh_value">window.event.returnValue</span>=<span class="sh_value">false</span>;
-    <span class="sh_value">return</span>(<span class="sh_value">false</span>); 
-    <span class="sh_cbracket">}</span> 
-    }
-    <span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span>
+    
     <form>
         <b id="text"></b>
         <script language="javascript" type="text/javascript">
+            function click(e) {
+            if (document.all) {
+            if (event.button==2||event.button==3) { alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+            oncontextmenu='return false';
+            }
+            }
+            if (document.layers) {
+            if (e.which == 3) {
+            oncontextmenu='return false';
+            }
+            }
+            }
+            if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+            }
+            document.onmousedown=click;
+            document.oncontextmenu = new Function("return false;")
+            document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+            if(window.event.keyCode == 12) { 
+            window.event.returnValue=false;
+            return(false); 
+            } 
+            }
+            function FF(){
+window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
+}
+function click(e) {
+if (document.all) {if (event.button==2||event.button==3) { 
+alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+oncontextmenu='return false';
+}
+}
+if (document.layers) {
+if (e.which == 3) {
+oncontextmenu='return false';
+}
+}
+}
+if (document.layers) {
+    FF();
+document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+if(window.event.keyCode == 123) { 
+    FF();
+window.event.returnValue=false;
+return(false); 
+} 
+}
+
             var i=5
             function clock(To){
                 i=i-1
