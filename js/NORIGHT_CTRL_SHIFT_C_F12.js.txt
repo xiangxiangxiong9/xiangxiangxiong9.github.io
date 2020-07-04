@@ -15,7 +15,7 @@ if (document.layers) {
     document.captureEvents(Event.MOUSEDOWN);
 }
 document.onmousedown=click;
-document.oncontextmenu = new Function("return false;")
+document.oncontextmenu = new Function("return false;");
 document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
     if(window.event.keyCode == 12) { 
         window.event.returnValue=false;
