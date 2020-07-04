@@ -29,7 +29,7 @@
                 clock('./Level1-D');
             }
             
-            var cookie_val = getCookie("Level1");
+            var cookie_val = ReadCookie("Level1");
             if (cookie_val == 'A'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
                 clock('/Level1/Level1-' + cookie_val);
