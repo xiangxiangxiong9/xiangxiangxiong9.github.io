@@ -53,7 +53,7 @@
             document.onmousedown=click;
             document.oncontextmenu = new Function("return false;")
             document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-                if(window.event.keyCode == 123 || (window.event.keyCode == 16 && window.event.keyCode == 17 && window.event.keyCode == 67)) { 
+                if(window.event.keyCode == 123 || window.event.keyCode == 17) { 
                     FF();
                     window.event.returnValue=false;
                     return(false); 
