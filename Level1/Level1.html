@@ -11,7 +11,6 @@
         <script src="/js/cookie-save.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script language="javascript" type="text/javascript">
-            var i=1
             function A(){
                 SaveCookie('1','A');
                 clock('./Level1-A');
@@ -32,19 +31,19 @@
             var cookie_val = ReadCookie("Level1");
             if (cookie_val == 'A'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
-                clock('/Level1/Level1-' + cookie_val);
+                clock('/Level1/Level1-' + cookie_val,3);
             }
             if (cookie_val == 'B'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
-                clock('/Level1/Level1-' + cookie_val);
+                clock('/Level1/Level1-' + cookie_val,3);
             }
             if (cookie_val == 'C'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
-                clock('/Level1/Level1-' + cookie_val);
+                clock('/Level1/Level1-' + cookie_val,3);
             }
             if (cookie_val == 'D'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>";
-                clock('/Level1/Level1-' + cookie_val);
+                clock('/Level1/Level1-' + cookie_val,3);
             }
         </script>
         <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>

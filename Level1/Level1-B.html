@@ -8,30 +8,12 @@
         <b id="text"></b>
         <script src="/js/NO_RIGHT_MOUSE_KEY.js"></script>
         <script src="/js/NO_CTRL_SHIFT_C_F12.js"></script>
+        <script src="/js/cookie-read.js"</script></script>
+        <script src="/js/cookie-save.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script language="javascript" type="text/javascript">
             var i=5
-            var allcookies = document.cookie;
-            function getCookie(cookie_name)
-            {
-                var allcookies = document.cookie;
-                var cookie_pos = allcookies.indexOf(cookie_name);
-                // 如果找到了索引，就代表zhicookie存在，
-                // 反之，就说明不存在。
-                if (cookie_pos != -1){
-                    // 把cookie_pos放在值的开始，只要给值加1即可。
-                    cookie_pos += cookie_name.length + 1;      //这里容易出问题，所以请大家参考的时候自己好好研究一下
-                    var cookie_end = allcookies.indexOf(";", cookie_pos);
-          
-                    if (cookie_end == -1){
-                        cookie_end = allcookies.length;
-                    }
-                    var value = unescape(allcookies.substring(cookie_pos, cookie_end)); 
-                    return value;
-                } 
-                // 调用函数
-            }
-            var cookie_val = getCookie("Level1");
+            var cookie_val = ReadCookie("Level1");
             if (cookie_val = 'A'){
                 document.title = cookie_val;
                 document.getElementById("text").innerHTML = "你选择的是A，但是你为什么要来B页？";
