@@ -1,53 +1,53 @@
 function click(e) {
     alert("谢绝右键!");
-        if (document.all) {
-            if (event.button==2||event.button==3) { alert("awa");
-                oncontextmenu='return false';
-            }
-        }
-        if (document.layers) {
-            if (e.which == 3) {
-                oncontextmenu='return false';
-            }
-        }
-    }
-    if (document.layers) {
-        document.captureEvents(Event.MOUSEDOWN);
-    }
-    document.onmousedown=click;
-    document.oncontextmenu = new Function("return false;")
-    document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-        if(window.event.keyCode == 12) { 
-            window.event.returnValue=false;
-            return(false); 
-        } 
-    }
-    function FF(){
-        //window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
-        location.reload()
-    }
-    function click(e) {
-        if (document.all) {if (event.button==2||event.button==3) { 
-                alert("awa");
-                oncontextmenu='return false';
-            }
-        }
-        if (document.layers) {
-            if (e.which == 3) {
+    if (document.all) {
+        if (event.button==2||event.button==3) { alert("awa");
             oncontextmenu='return false';
-            }
         }
     }
     if (document.layers) {
+        if (e.which == 3) {
+            oncontextmenu='return false';
+        }
+    }
+}
+if (document.layers) {
+    document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+    if(window.event.keyCode == 12) { 
+        window.event.returnValue=false;
+        return(false); 
+    } 
+}
+function FF(){
+    //window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
+    location.reload()
+}
+function click(e) {
+    if (document.all) {if (event.button==2||event.button==3) { 
+            alert("awa");
+            oncontextmenu='return false';
+        }
+    }
+    if (document.layers) {
+        if (e.which == 3) {
+        oncontextmenu='return false';
+        }
+    }
+}
+if (document.layers) {
+    FF();
+    document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+    if(window.event.keyCode == 123 || window.event.keyCode == 16 || window.event.keyCode == 17 || window.event.keyCode == 67) { 
         FF();
-        document.captureEvents(Event.MOUSEDOWN);
-    }
-    document.onmousedown=click;
-    document.oncontextmenu = new Function("return false;")
-    document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-        if(window.event.keyCode == 123 || window.event.keyCode == 16 || window.event.keyCode == 17 || window.event.keyCode == 67) { 
-            FF();
-            window.event.returnValue=false;
-            return(false); 
-        } 
-    }
+    window.event.returnValue=false;
+    return(false); 
+    } 
+}
