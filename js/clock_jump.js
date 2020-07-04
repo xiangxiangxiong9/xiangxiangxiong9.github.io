@@ -14,11 +14,10 @@ function clock1(To){
     }
 }
 function clock(To, time){
-    for(var i = time ;i>0 ;i--){
+    for(var i = time; i>0 ;i--){
         setTimeout(function(){
                 console.log(i); 
-            }
-        )
+            },1000)
     }
     console.log(i);
 }
