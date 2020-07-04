@@ -1,7 +1,3 @@
-function clock(To, time){
-    var i = time;
-    clock1(To);
-}
 function clock1(To){
     i = i - 1;
     document.title = "页面将在" + i + "内跳转";
@@ -16,4 +12,8 @@ function clock1(To){
     window.close();
     window.open("about:blank", "_0").close();
     }
+}
+function clock(To, time){
+    var i = time;
+    clock1(To);
 }
