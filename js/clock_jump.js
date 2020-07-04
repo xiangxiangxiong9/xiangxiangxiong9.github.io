@@ -18,7 +18,7 @@ function clock(To, time){
         (function(i){
             setTimeout(function(){
                 console.log(i);
-            },1000);
+            },i * 1000);
         })(i)
     }
     console.log(i);
