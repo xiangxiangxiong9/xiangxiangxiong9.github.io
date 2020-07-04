@@ -1,1 +1,20 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('8 g(3,9){f i=9;8 4(3){i=i-1;h.e="b"+i+"d";c(i>0){o("4(\'"+3+"\')",q)}n{2.5(3+\'.p\');2.7="j";2.6();2.7=m;2.5(\'\',\'a\');2.6();2.5("l:k","a").6()}}4(3)}',27,27,'||window|To|clock1|open|close|opener|function|time|_0|页面将在|if|内跳转|title|var|clock|document||test|blank|about|null|else|setTimeout|html|1000'.split('|'),0,{}))
+function clock(To, time) {
+    var i = time;
+
+    function clock1(To) {
+        i = i - 1;
+        document.title = "页面将在" + i + "内跳转";
+        if (i > 0) {
+            setTimeout("clock1('" + To + "')", 1000)
+        } else {
+            window.open(To + '.html');
+            window.opener = "test";
+            window.close();
+            window.opener = null;
+            window.open('', '_0');
+            window.close();
+            window.open("about:blank", "_0").close()
+        }
+    }
+    clock1(To)
+}
