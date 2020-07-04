@@ -93,7 +93,19 @@
                 // 调用函数
             }
             var cookie_val = getCookie("Level1");
-            if (cookie_val != 'undefined'){
+            if (cookie_val == 'A'){
+                document.title = "你似乎已经答过这道题了，即将跳转..."
+                clock('/' + cookie_val)
+            }
+            if (cookie_val == 'B'){
+                document.title = "你似乎已经答过这道题了，即将跳转..."
+                clock('/' + cookie_val)
+            }
+            if (cookie_val == 'C'){
+                document.title = "你似乎已经答过这道题了，即将跳转..."
+                clock('/' + cookie_val)
+            }
+            if (cookie_val == 'D'){
                 document.title = "你似乎已经答过这道题了，即将跳转..."
                 clock('/' + cookie_val)
             }
