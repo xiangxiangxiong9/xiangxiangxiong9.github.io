@@ -7,80 +7,27 @@
         <a id="text"></a>
         <script src="/js/NO_RIGHT_MOUSE_KEY.js"></script>
         <script src="/js/NO_CTRL_SHIFT_C_F12.js"></script>
+        <script src="/js/cookie-read.js" src="/js/cookie-save.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script language="javascript" type="text/javascript">
             var i=1
             function A(){
-                var Days = 30;
-                var exp = new Date();
-                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = 'Level1=A;path=/'+ ';expires=' + exp.toGMTString();
-                window.open('./Level1-A.html');
-                window.opener = "test";
-                window.close();
-                window.opener=null;
-                window.open('','_self');
-                window.close();
-                window.open("about:blank","_self").close();
+                SaveCookie('1','A')
+                clock('./Level1-A')
             }
             function B(){
-                var Days = 30;
-                var exp = new Date();
-                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = 'Level1=B;path=/'+ ';expires=' + exp.toGMTString();
-                window.open('./Level1-B.html');
-                window.opener = "test";
-                window.close();
-                window.opener=null;
-                window.open('','_self');
-                window.close();
-                window.open("about:blank","_self").close();
+                SaveCookie('1','B')
+                clock('./Level1-B')
             }
             function C(){
-                var Days = 30;
-                var exp = new Date();
-                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = 'Level1=C;path=/'+ ';expires=' + exp.toGMTString();
-                window.open('./Level1-C.html');
-                window.opener = "test";
-                window.close();
-                window.opener=null;
-                window.open('','_self');
-                window.close();
-                window.open("about:blank","_self").close();
+                SaveCookie('1','C')
+                clock('./Level1-C')
             }
             function D(){
-                var Days = 30;
-                var exp = new Date();
-                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = 'Level1=D;path=/'+ ';expires=' + exp.toGMTString();
-                window.open('./Level1-D.html');
-                window.opener = "test";
-                window.close();
-                window.opener=null;
-                window.open('','_self');
-                window.close();
-                window.open("about:blank","_self").close();
+                SaveCookie('1','D')
+                clock('./Level1-D')
             }
-            function getCookie(cookie_name)
-            {
-                var allcookies = document.cookie;
-                var cookie_pos = allcookies.indexOf(cookie_name);
-                // 如果找到了索引，就代表zhicookie存在，
-                // 反之，就说明不存在。
-                if (cookie_pos != -1){
-                    // 把cookie_pos放在值的开始，只要给值加1即可。
-                    cookie_pos += cookie_name.length + 1;      //这里容易出问题，所以请大家参考的时候自己好好研究一下
-                    var cookie_end = allcookies.indexOf(";", cookie_pos);
-          
-                    if (cookie_end == -1){
-                        cookie_end = allcookies.length;
-                    }
-                    var value = unescape(allcookies.substring(cookie_pos, cookie_end)); 
-                    return value;
-                } 
-                // 调用函数
-            }
+            
             var cookie_val = getCookie("Level1");
             if (cookie_val == 'A'){
                 document.getElementById("text").innerHTML = "你似乎已经答过这道题了，即将跳转...<br>"
