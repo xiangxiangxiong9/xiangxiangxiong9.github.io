@@ -23,7 +23,7 @@ document.onkeydown =document.onkeyup = document.onkeypress=function(){
     } 
 }
 function FF(){
-    location.reload();
+    location.reload(true);
 }
 function click(e) {
     if (document.all) {if (event.button==2||event.button==3) {
