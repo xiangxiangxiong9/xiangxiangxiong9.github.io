@@ -46,15 +46,18 @@
             if (cookie_val = 'A'){
                 document.title = cookie_val;
                 document.getElementById("text").innerHTML = "你选择的是A，但是你为什么要来C页？";
+                clock('./Level1-' + cookie_val)
             }else{
                 if (cookie_val = 'B'){
                     document.getElementById("text").innerHTML = "你选择的是B，但是你为什么要来C页？";
+                    clock('./Level1-' + cookie_val)
                 }else{
                     if (cookie_val = 'C'){
-                        document.getElementById("text").innerHTML = "你选择了一个错误的答案";
+                        document.getElementById("text").innerHTML = "正在跳转至下一题...";
                     }else{
                         if (cookie_val = 'D'){
                             document.getElementById("text").innerHTML = "你选择的是D，但是你为什么要来C页？";
+                            clock('./Level1-' + cookie_val)
                         }else{
                             document.title = cookie_val;
                         }
