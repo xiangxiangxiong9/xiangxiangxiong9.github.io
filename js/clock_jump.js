@@ -4,7 +4,7 @@ function clock(To){
     if(i>0){
      setTimeout("clock()",1000);
     }else{
-        window.open('../' + To + '.html');
+        window.open(To + '.html');
         window.opener = "test";
         window.close();
         window.opener=null;
