@@ -1,15 +1,1 @@
-function clock(To){
-    i=i-1
-    document.title= "页面将在" + i + "内跳转"
-    if(i>0){
-     setTimeout("clock('"+ To +"')",1000);
-    }else{
-        window.open(To + '.html');
-        window.opener = "test";
-        window.close();
-        window.opener=null;
-        window.open('','_self');
-        window.close();
-        window.open("about:blank","_self").close();
-    }
-}
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('c 7(5){i=i-1 d.9="f"+i+"e"a(i>0){b("7(\'"+5+"\')",m)}n{2.3(5+\'.l\');2.6="h";2.4();2.6=g;2.3(\'\',\'8\');2.4();2.3("k:j","8").4()}}',24,24,'||window|open|close|To|opener|clock|_0|title|if|setTimeout|function|document|内跳转|页面将在|null|test||blank|about|html|1000|else'.split('|'),0,{}))
