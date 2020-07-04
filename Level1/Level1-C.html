@@ -7,13 +7,13 @@
         <b id="text"></b>
         <script language="javascript" type="text/javascript">
             var i=5
-            function clock(){
+            function clock(To){
                 i=i-1
                 document.title= "页面将在" + i + "内跳转"
                 if(i>0){
                     setTimeout("clock()",1000);
                 }else{
-                    window.open('../Failed.html');
+                    window.open('../' + To + '.html');
                     window.opener = "test";
                     window.close();
                     window.opener=null;
