@@ -1,1 +1,52 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('9 c(e){g("w!");1(0.i){1(4.d==2||4.d==3){g("l");8=\'6 5\'}}1(0.b){1(e.j==3){8=\'6 5\'}}}1(0.b){0.m(n.k)}0.h=c;0.8=r s("6 5;");0.t=0.o=0.p=9(){1(7.4.a==v){7.4.q=5;6(5)}}9 f(){x.u()}9 c(e){1(0.i){1(4.d==2||4.d==3){g("l");8=\'6 5\'}}1(0.b){1(e.j==3){8=\'6 5\'}}}1(0.b){f();0.m(n.k)}0.h=c;0.8=r s("6 5;");0.t=0.o=0.p=9(){1(7.4.a==z||7.4.a==B||7.4.a==A||7.4.a==y){f();7.4.q=5;6(5)}}',38,38,'document|if|||event|false|return|window|oncontextmenu|function|keyCode|layers|click|button||FF|alert|onmousedown|all|which|MOUSEDOWN|awa|captureEvents|Event|onkeyup|onkeypress|returnValue|new|Function|onkeydown|reload|12|谢绝右键|location|67|123|17|16'.split('|'),0,{}))
+function click(e) {
+    alert("谢绝右键!");
+    if (document.all) {
+        if (event.button==2||event.button==3) { alert("awa");
+            oncontextmenu='return false';
+        }
+    }
+    if (document.layers) {
+        if (e.which == 3) {
+            oncontextmenu='return false';
+        }
+    }
+}
+if (document.layers) {
+    document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;");
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+    if(window.event.keyCode == 12) { 
+        window.event.returnValue=false;
+        return(false); 
+    } 
+}
+function FF(){//window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
+    location.reload();
+}
+function click(e) {
+    if (document.all) {if (event.button==2||event.button==3) { 
+            alert("awa");
+            oncontextmenu='return false';
+        }
+    }
+    if (document.layers) {
+        if (e.which == 3) {
+        oncontextmenu='return false';
+        }
+    }
+}
+if (document.layers) {
+    FF();
+    document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;");
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+    if(window.event.keyCode == 123 || window.event.keyCode == 16 || window.event.keyCode == 17 || window.event.keyCode == 67) { 
+        FF();
+    window.event.returnValue=false;
+    return(false); 
+    } 
+}

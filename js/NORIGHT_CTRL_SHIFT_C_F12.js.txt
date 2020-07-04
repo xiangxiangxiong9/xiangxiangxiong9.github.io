@@ -22,8 +22,7 @@ document.onkeydown =document.onkeyup = document.onkeypress=function(){
         return(false); 
     } 
 }
-function FF(){
-    //window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
+function FF(){//window.close(); //关闭当前窗口(防抽)window.location="about:blank"; //将当前窗口跳转置空白页
     location.reload();
 }
 function click(e) {
