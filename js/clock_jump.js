@@ -20,6 +20,7 @@ function clock(To, time){
                 console.log(i);
             },i * 1000);
         })(i)
+        console.log('now' + i);
     }
     console.log(i);
 }
