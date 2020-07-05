@@ -1,4 +1,3 @@
-history.pushState(null, null, document.URL);
 history.pushState('forward', null, document.URL);
 history.pushState('forward', null, document.URL);
 history.pushState('forward', null, document.URL);
