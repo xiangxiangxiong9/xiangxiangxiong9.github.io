@@ -17,13 +17,26 @@ var week=new Array("星期日","星期一","星期二","星期三","星期四","
 var Tools=document.getElementById("Main")
 var da=year+" 年 "+month+" 月 "+days+" 日 "+week[day]+" "+hour+" : "+minute+" :"+second
 document.getElementById("time").innerHTML = "当前时间: " + da*/
-function Time(){
+function Time(TimeBefore,TimeAfter){
     nowtime=new Date();
     year=nowtime.getFullYear();
     month=nowtime.getMonth()+1;
-    date=nowtime.getDate();
+    day=nowtime.getDay();
+    /*date=nowtime.getDate();
+    var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")*/
     time = year+"年"+month+"月"+date+"日 "+nowtime.toLocaleTimeString('chinese',{hour12:false});
-    document.getElementById("time").innerHTML='<time>' + time + '<br><br></time>';
-    document.title=time;
+    if (TimeBefore = ''){
+        if(TimeAfter = ''){
+            document.title=time;
+        }else{
+            document.title=time + TimeAfter;
+        }
+    }else{
+        if(TimeAfter = ''){
+            document.title= TimeBefore + time;
+        }else{
+            document.title= TimeBefore + time + TimeAfter;
+        }
+    }
+    setTimeout("Time('"+TimeBefore+"','"+TimeAfter+"')");
 }
-setInterval("Time()",1000);
