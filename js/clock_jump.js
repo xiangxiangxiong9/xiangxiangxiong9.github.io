@@ -1,8 +1,8 @@
-function clock1(To,i){
-    i = i - 1;
-    document.title = "页面将在" + i + "内跳转";
+function clock(To, time){
+    time = time - 1;
+    document.title = "页面将在" + time + "内跳转";
     if (i > 0) {
-        setTimeout("clock1('" + To + "','" + i + "')", 1000);
+        setTimeout("clock1('" + To + "','" +time + "')", 1000);
     } else {
     window.open(To + '.html');
     window.opener = "test";
@@ -12,7 +12,4 @@ function clock1(To,i){
     window.close();
     window.open("about:blank", "_0").close();
     }
-}
-function clock(To, time){
-    clock1(To,time);
 }
