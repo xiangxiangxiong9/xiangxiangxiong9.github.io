@@ -46,3 +46,45 @@ window.addEventListener('pageshow', function(e) {
 window.addEventListener('popstate', function(e) {
     history.pushState(null, null, document.URL);
 })
+function NOBACK(){
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+}
