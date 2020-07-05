@@ -15,7 +15,7 @@ function clock1(To){
 }
 function clock(To, time){
     for(var i = 0; i < time; i++){
-        (function(i){
+        (function(i,To,time){
             setTimeout(function(){
                 console.log(i);
                 if(i = time){
