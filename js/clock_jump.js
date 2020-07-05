@@ -14,5 +14,5 @@ function clock1(To,i){
     }
 }
 function clock(To, time){
-    function clock1(To,time)
+    clock1(To,time);
 }
