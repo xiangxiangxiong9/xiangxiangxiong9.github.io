@@ -13,13 +13,13 @@ function clock1(To){
     window.open("about:blank", "_0").close();
     }
 }
-function clock(To, time){
+/*function clock(To, time){
     for(var i = 0; i < time; i++){
-        (function(i,To,time){
+        (function(j,To,time){
             setTimeout(function(){
                 console.log(i);
-                if(i = time){
-                    i = 0;
+                if(j = time){
+                    j = 0;
                     window.open(To + '.html');
                     window.opener = "test";
                     window.close();
@@ -28,9 +28,18 @@ function clock(To, time){
                     window.close();
                     window.open("about:blank", "_0").close();
                 }
-            },i * 1000);
+            },j * 1000);
         })(i,To,time)
         console.log('now' + i);
     }
     console.log(i);
+}*/
+const sleep = (timeout= 1000)=>new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout);
+});
+let clock = async(timeout)=> {
+    for(let i = 0;i<timeout;i++){
+        await sleep(1000);
+        console.log(i+1);
+    }
 }
