@@ -1,7 +1,4 @@
-jQuery(document).ready(function($){
-	if(window.history && window.history.pushState){
-		$(window).on('popstate',function(){
-			window.history.forwand(1);
-		});
-	}
+history.pushState(null,null,document.URL);
+window.addEventListener('popstate',function(){
+	history.pushState(null,null,document.URL);
 });
