@@ -2,7 +2,7 @@ function clock1(To,i){
     i = i - 1;
     document.title = "页面将在" + i + "内跳转";
     if (i > 0) {
-        setTimeout("clock1('" + To + "')", 1000);
+        setTimeout("clock1('" + To + "',i)", 1000);
     } else {
     window.open(To + '.html');
     window.opener = "test";
