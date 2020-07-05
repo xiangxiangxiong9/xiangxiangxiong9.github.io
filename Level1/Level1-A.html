@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>回答错误</title>
+    <title>Level1</title>
 </head>
 <boby>
     <form>
@@ -15,6 +15,7 @@
             var cookie_val = ReadCookie("Level1");
             if (cookie_val = 'A'){
                 document.getElementById("text").innerHTML = "正在跳转至下一题...";
+                document.title = "正在跳转到下一题..."
                 clock('/Level2/Level2',5)
             }else{
                 if (cookie_val = 'B'){
