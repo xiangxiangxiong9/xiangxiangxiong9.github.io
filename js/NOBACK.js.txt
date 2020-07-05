@@ -1,0 +1,90 @@
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+history.pushState('forward', null, document.URL);
+console.log('Done');
+window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+        location.reload();
+    }
+})
+window.addEventListener('popstate', function(e) {
+    history.pushState(null, null, document.URL);
+})
+function NOBACK(){
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+	history.pushState('forward', null, document.URL);
+	console.log('Done');
+}

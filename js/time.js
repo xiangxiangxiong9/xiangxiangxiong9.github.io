@@ -1,13 +1,1 @@
-function Time(){
-    nowtime=new Date();
-    year=nowtime.getFullYear();
-    month=nowtime.getMonth()+1;
-    day=nowtime.getDay();
-    date=nowtime.getDate();
-    /*date=nowtime.getDate();
-    var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")*/
-    time = year+"年"+month+"月"+date+"日 "+nowtime.toLocaleTimeString('chinese',{hour12:false});
-    //document.getElementById("time").innerHTML='<time>' + time + '<br><br></time>';
-    document.title=time;
-}
-setInterval("Time()",1000)
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('f 5(){0=c b();3=0.d();2=0.7()+1;e=0.a();6=0.8();4=3+"9"+2+"m"+6+"n "+0.p(\'o\',{g:i});k.j=4}h("5()",l)',26,26,'nowtime||month|year|time|Time|date|getMonth|getDate|年|getDay|Date|new|getFullYear|day|function|hour12|setInterval|false|title|document|1000|月|日|chinese|toLocaleTimeString'.split('|'),0,{}))
