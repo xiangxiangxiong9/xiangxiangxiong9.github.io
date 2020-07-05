@@ -22,7 +22,7 @@ function Time(){
     year=nowtime.getFullYear();
     month=nowtime.getMonth()+1;
     date=nowtime.getDate();
-    time = year+"年"+month+"月"+date+"日 "+nowtime.toLocaleTimeString();
+    time = year+"年"+month+"月"+date+"日 "+nowtime.toLocaleTimeString('chinese',{hour12:false});
     document.getElementById("time").innerHTML='<time>' + time + '<br><br></time>'
 }
 setInterval("Time()",1000);
