@@ -7,13 +7,14 @@
     <form>
         <h>404 没有找到<br></h>
         <h1 id="404"></h1>
+        <time id="time"></time>
+        <script src="/js/time.js"></script>
         <!--<script src="/js/NO_RIGHT_MOUSE_KEY.js"></script>
         <script src="/js/NO_CTRL_SHIFT_C_F12.js"></script>
         <script src="/js/NOBACK.js"></script>-->
         <script language="javascript" type="text/javascript">
             NOBACK();
-            var URL = document.URL;
-            document.getElementById("404").innerHTML = "我们无法从服务中找到 " + URL + " 目录，请问其是否正确？";
+            document.getElementById("404").innerHTML = "我们无法从找到 " + window.location.pathname + " 目录，请问其是否正确？";
         </script>
         
     </form>
