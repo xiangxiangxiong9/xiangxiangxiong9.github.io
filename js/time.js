@@ -23,6 +23,6 @@ function Time(){
     month=nowtime.getMonth()+1;
     date=nowtime.getDate();
     time = year+"年"+month+"月"+date+"日 "+nowtime.toLocaleTimeString();
-    document.getElementById("time").innerText='<time>' + time + '<br></time>'
+    document.getElementById("time").innerHTML='<time>' + time + '<br><br></time>'
 }
 setInterval("Time()",1000);
