@@ -5,6 +5,19 @@
 </head>
 <boby>
     <form>
+        <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>
+        <div align='left' style="position:relative;top:10px">
+            <button type="button" onclick="touched('1',Random_A,Did)" id="A"></button>
+        </div>
+        <div align='left' style="position:relative;top:15px">
+            <button type="button" onclick="touched('1',Random_B,Did)" id="B"></button>
+        </div>
+        <div align='left' style="position:relative;top:20px">
+            <button type="button" onclick="touched('1',Random_C,Did)" id="C"></button>
+        </div>
+        <div align='left' style="position:relative;top:25px">
+            <button type="button" onclick="touched('1',Random_D,Did)" id="D"></button>
+        </div>
         <time id="time"></time>
         <script src="/js/time.js"></script>
         <a id="text"></a>
@@ -31,18 +44,5 @@
             }
             Random("狂人日记》是老舍写的","腐竹Malajis没有正版","Minecraft成立于1978年","以上都不对");
         </script>
-        <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>
-        <div align='left' style="position:relative;top:10px">
-            <button type="button" onclick="touched('1',Random_A,Did)" id="A"></button>
-        </div>
-        <div align='left' style="position:relative;top:15px">
-            <button type="button" onclick="touched('1',Random_B,Did)" id="B"></button>
-        </div>
-        <div align='left' style="position:relative;top:20px">
-            <button type="button" onclick="touched('1',Random_C,Did)" id="C"></button>
-        </div>
-        <div align='left' style="position:relative;top:25px">
-            <button type="button" onclick="touched('1',Random_D,Did)" id="D"></button>
-        </div>>
     </form>
 </boby>
