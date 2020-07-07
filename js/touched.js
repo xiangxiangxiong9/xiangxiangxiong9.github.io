@@ -1,4 +1,4 @@
-function touch(Level,ID,Did){
+function touched(Level,ID,Did){
     if (Did = 0){
         SaveCookie('Level'+Level,ID,'30');
         clock('./Level1-A',1);
