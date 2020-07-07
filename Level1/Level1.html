@@ -30,19 +30,19 @@
         <script language="javascript" type="text/javascript">
             Did = check('1');
             NOBACK();
-            function Random(Answer1,Answer2,Answer3,Answer4){
-                random = random(1,4);
-                var touch = {A,B,C,D}
-                var Random_A = touch[random[1]];
-                var Random_B = touch[random[2]];
-                var Random_C = touch[random[3]];
-                var Random_D = touch[random[4]];
-                document.getElementById(touch[random[1]]).innerHTML = touch[random[1]] + '. ' + Answer1;
-                document.getElementById(touch[random[2]]).innerHTML = touch[random[2]] + '. ' + Answer2;
-                document.getElementById(touch[random[3]]).innerHTML = touch[random[3]] + '. ' + Answer3;
-                document.getElementById(touch[random[4]]).innerHTML = touch[random[4]] + '. ' + Answer4;
+            function answer(Answer1,Answer2,Answer3,Answer4){
+                temp = random(0,3);
+                var touch = ['A','B','C','D'];
+                var Random_A = touch[temp[0]];
+                var Random_B = touch[temp[1]];
+                var Random_C = touch[temp[2]];
+                var Random_D = touch[temp[3]];
+                document.getElementById(touch[temp[0]]).innerHTML = touch[temp[0]] + '. ' + Answer1;
+                document.getElementById(touch[temp[1]]).innerHTML = touch[temp[1]] + '. ' + Answer2;
+                document.getElementById(touch[temp[2]]).innerHTML = touch[temp[2]] + '. ' + Answer3;
+                document.getElementById(touch[temp[3]]).innerHTML = touch[temp[3]] + '. ' + Answer4;
             }
-            Random("狂人日记》是老舍写的","腐竹Malajis没有正版","Minecraft成立于1978年","以上都不对");
+            answer("《狂人日记》是老舍写的","腐竹Malajis没有正版","Minecraft成立于1978年","以上都不对");
         </script>
     </form>
 </boby>
