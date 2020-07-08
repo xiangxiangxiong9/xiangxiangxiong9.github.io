@@ -1,7 +1,7 @@
 function touched(Level,ID,Did){
     if (Did == '0'){
         SaveCookie('Level'+Level,ID,'30');
-        clock('./Level1-Done',1);
+        clock('./Level' + Level + '-Done',1);
     }else{
         alert('你似乎已经答过这道题了！');
     }  
