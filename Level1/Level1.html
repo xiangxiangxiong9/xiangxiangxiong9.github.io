@@ -7,16 +7,16 @@
     <form>
         <question style="color:red">请问： 你认为以下哪一个是正确的？<br><br><br></question>
         <div align='left' style="position:relative;top:10px">
-            <button type="button" onclick="touched('1',Random_A,Did)" id="A"></button>
+            <button type="button" onclick="touched('1',Answer[0],Did)" id="A"></button>
         </div>
         <div align='left' style="position:relative;top:15px">
-            <button type="button" onclick="touched('1',Random_B,Did)" id="B"></button>
+            <button type="button" onclick="touched('1',Answer[1],Did)" id="B"></button>
         </div>
         <div align='left' style="position:relative;top:20px">
-            <button type="button" onclick="touched('1',Random_C,Did)" id="C"></button>
+            <button type="button" onclick="touched('1',Answer[2],Did)" id="C"></button>
         </div>
         <div align='left' style="position:relative;top:25px">
-            <button type="button" onclick="touched('1',Random_D,Did)" id="D"></button>
+            <button type="button" onclick="touched('1',Answer[3],Did)" id="D"></button>
         </div>
         <time id="time"></time>
         <script src="/js/time.js"></script>
@@ -34,16 +34,16 @@
             function answer(Answer1,Answer2,Answer3,Answer4){
                 temp = random(0,3);
                 var touch = ['A','B','C','D'];
-                var Random_A = touch[temp[0]];
-                var Random_B = touch[temp[1]];
-                var Random_C = touch[temp[2]];
-                var Random_D = touch[temp[3]];
-                document.getElementById(touch[temp[0]]).innerHTML = touch[temp[0]] + '. ' + Answer1;
-                document.getElementById(touch[temp[1]]).innerHTML = touch[temp[1]] + '. ' + Answer2;
-                document.getElementById(touch[temp[2]]).innerHTML = touch[temp[2]] + '. ' + Answer3;
-                document.getElementById(touch[temp[3]]).innerHTML = touch[temp[3]] + '. ' + Answer4;
+                var answers = [Answer1,Answer2,Answer3,Answer4];
+                document.getElementById("A").innerHTML = 'A. ' + answers[temp[0]];
+                document.getElementById("B").innerHTML = 'B. ' + answers[temp[1]];
+                document.getElementById("C").innerHTML = 'C. ' + answers[temp[2]];
+                document.getElementById("D").innerHTML = 'D. ' + answers[temp[3]];
+                console.log(temp);
+                console.log(touch[temp[0]]+touch[temp[1]]+touch[temp[2]]+touch[temp[3]]);
+                return[touch[temp[0]],touch[temp[1]],touch[temp[2]],touch[temp[3]]]
             }
-            answer("《狂人日记》是老舍写的","腐竹Malajis没有正版","Minecraft成立于1978年","以上都不对");
+            var Answer = answer("《狂人日记》是老舍写的","腐竹Malajis没有正版","Minecraft成立于1978年","以上都不对");
         </script>
     </form>
 </boby>
