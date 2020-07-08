@@ -1,5 +1,5 @@
 function touched(Level,ID,Did){
-    if (Did = 0){
+    if (Did == '0'){
         SaveCookie('Level'+Level,ID,'30');
         clock('./Level1-Done',1);
     }else{
@@ -29,5 +29,5 @@ function check(Level){
         clock('/Level2/Level2','3');
         Did = 1;
     }
-    return Did
+    return Did;
 }
