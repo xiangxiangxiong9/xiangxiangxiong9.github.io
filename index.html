@@ -5,13 +5,20 @@
 </head>
 <body>
     <form>
+        <a id="text"></a>
         <time id="time"></time>
         <script src="/js/time.js"></script>
         <script src="/js/NO_RIGHT_MOUSE_KEY.js"></script>
         <script src="/js/NO_CTRL_SHIFT_C_F12.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script src="/js/NOBACK.js"></script>
+        <script src="/js/check_phone.js"></script>
         <script language="javascript" type="text/javascript">
+            if(isMoblie()){
+                alert('请使用电脑答题，请勿使用手机答题');
+                clock('/403',3)
+                document.getElementById("text").innerHTML = "请使用电脑答题，请勿使用手机答题<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+            }
             NOBACK();
         </script>
         <h>Hello World!<br></h>
