@@ -11,33 +11,25 @@
         </div>
         <time id="time"></time>
         <script src="/js/sha256.js"></script>
+        <script src="/js/plugins.js"></script>
         <script src="/js/PlayerLogin.js"></script>
+        <script src="/js/ReadVaule.js"></script>
+        <script src="/js/cookie.js"></script>
+        <script src="/js/clock_jump.js"></script>
         <script type="text/javascript">
-             var thisURL = document.URL;  
-        
-        //分割成字符串
-        var getval =thisURL.split('?')[1];  
-        var key = new Array();
-        var keyValue = getval.split('&');  
-        var value = new Array();
-        var get = new Array();
-        var showval = "";  
-        for(var i = 0;i <keyValue.length;i++){  
-            var oneKeyValue = keyValue[i];  
-            var oneValue = oneKeyValue.split("=")[1];  
-            key[i] = oneValue;
-            value[i] = oneKeyValue.split("=")[0];
-            get[i] = oneKeyValue
-            showval = showval + oneValue + ";"  
-        } 
-         for(var i = 0;i <keyValue.length;i++){ 
-          var oneKeyValue = keyValue[i];   
-          this[oneKeyValue.split("=")[0]] = oneKeyValue.split("=")[1];
-
-        }
-        document.getElementById("plugins").innerHTML = key + '<br>' + value + '<br>' + get + '<br>' + 'User: ' + User +'<br>Password: ' + Password
-        PlayerLogin(User,Password)
+            User = ReadCookie('User')
+            Password = ReadCookie('Password')
+            if(User == '' || Password == ''){
+                document.getElementById("plugins").innerHTML = '请先登录';
+                clock('/PlayerLogin',5)
+            }else{
+                playerlogin = PlayerLogin(User,Password)
+                if(!playerlogin){
+                    document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
+                }else{
+                    ShowPlugins(User)
+                }
+            }
         </script>
-        
     </form>
 </body>

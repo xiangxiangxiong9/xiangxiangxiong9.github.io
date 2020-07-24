@@ -14,7 +14,9 @@
         <!--<script src="/js/NOBACK.js"></script>-->
         <script language="javascript" type="text/javascript">
             //NOBACK();
-            document.getElementById("403").innerHTML = "你可能没有权限访问当前目录";
+            var thisURL = document.URL;  
+            var getval =thisURL.split('?')[1];  
+            document.getElementById("403").innerHTML = "你可能没有权限访问 " + getval;
         </script>
     </form>
 </body>
