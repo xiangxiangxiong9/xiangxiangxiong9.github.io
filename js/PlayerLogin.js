@@ -13,7 +13,7 @@ function PlayerLogin(User,Password){
 	if(realpassword == '' && salt == ''){
     	back = [Login,'AccountError'];
     }else{
-    	if(SHA256(SHA256(Password) + salt) == realpassword){
+    	if(CryptoJS.SHA256(CryptoJS.SHA256(Password).toString() + salt).toString() == realpassword){
     			/*console.log("登录成功");
     			alert("登录成功");*/
     			Login = true;

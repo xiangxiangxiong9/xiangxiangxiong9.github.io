@@ -1,0 +1,44 @@
+<script src="/js/crypto-js.js"></script>
+<script type="text/javascript">
+	function random(start, end) {
+    var length = end - start;
+    var myorder = new Array();
+    var index = 0;
+    while (index < length+1) {
+        var flag = true;
+        var num = parseInt(start + Math.random() * (end-start+1));
+        for (var i in myorder) {
+            if (myorder[i] == num) {
+                    flag = false;
+                }
+        }
+        if (flag == true) {
+            myorder[index] = num;
+            index++;
+        }
+        }
+    return myorder;
+}
+</script>
+<script type="text/javascript">
+	function Aes(aes){
+        const iv = "1506"
+		Random = random(0,15)
+		aeskey = ['MmjiI0iLopHyId59','ziE0GT2UqGd2rMv4','IJPeAFisFKnjbdO1','8D7vYidbSMKEqq97','aBTZBrzrbMOZGner','pxjdGBHZxXtpFhEx','9KUVYuNSvVIHBTqs','cSK1Tm3MDY2PhLvy','FeiRmuoMswCP660t','QMCr8aZ3An4EG2Ha','tmifTH5vKxLSCSlf','cbTQIfmXBMlu2loO','ZTPwnCxr16PsUfgv','vZw91QK4MGeq0JrO','04KBETBdK1KjQfN6','VnERJcrK4UHTG0kO','q4jz2KirAOzapcLS','dZbLYYoMv5a8AcHm','sqBOdhHI9rA9ti0Y','2Chcl0KiW0otcKI6','FnMoBBvSsuyWbjhE','lqxWj69Ekj9UVLSR','7uGJJtCvDuseDwC2','KxBeIB3dWDo61EDu','6AudDCSSApqtXEHk','Ahp0B1yJVCIPxNnl','NRmQf9JNRVERpcSA','3VIK3XfeD93zgNA9','oO9XmCi7SGs8vstC','kzTscibV3AbaF7jx','BZTNCSDb5RzFubND','kOt0F0s9Mo1jpsLG'
+]
+		for(var i = 0; i < aeskey.length;i++){
+            console.log(aeskey[i])
+			aes = CryptoJS.AES.encrypt(aes,aeskey[i],{
+                iv:CryptoJS.enc.Utf8.parse(iv),
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7
+            }).toString()
+            console.log(aes)
+		}
+
+		var Random = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(Random))
+		KEY = '$AES$' + Random + '$' + aes
+		alert(KEY)
+		return KEY
+	}
+</script>
