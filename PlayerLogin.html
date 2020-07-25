@@ -32,7 +32,7 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" id="Password">
             if(playerlogin[0]){
                 SaveCookie('User',User,'30')
                 SaveCookie('Password',Password,'30')
-                document.getElementById("login").innerHTML = "登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
                 clock(document.referrer,5)
             }
             function login(loged){
@@ -43,7 +43,7 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" id="Password">
                 if(playerlogin[0]){
                     SaveCookie('User',playerlogin[1],'30')
                     SaveCookie('Password',playerlogin[2],'30')
-                    document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...';
+                    document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
                     clock(document.referrer,5)
                 }else{
                         document.getElementById("login").innerHTML = '账户或密码错误';
