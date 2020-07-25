@@ -10,19 +10,22 @@
 
         </div>
         <time id="time"></time>
-        <script src="/js/加密.js"></script>
+        <script src="/js/crypto-js.js"></script>
+        <script src="/js/AES.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/PlayerLogin.js"></script>
         <script src="/js/ReadVaule.js"></script>
         <script src="/js/cookie.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script type="text/javascript">
-            User = ReadCookie('User')
-            Password = ReadCookie('Password')
-            if(User == '' || Password == ''){
-                document.getElementById("plugins").innerHTML = '请先登录';
-                clock('/PlayerLogin',5)
-            }else{
+            var User = ''
+            var Password = ''
+            aes = ReadCookie('UserToken')
+            if(aes != ''){
+            aes = Aesout(aes)
+            aes = aes.split(",")
+            for(var i = 0;i < aes.length;i++)
+                this[aes[i].split(" = ")[0]] = aes[i].split(" = ")[1];
                 playerlogin = PlayerLogin(User,Password)
                 if(!playerlogin[0]){
                     document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
@@ -30,7 +33,10 @@
                 }else{
                     ShowPlugins(User,Password)
                 }
-            }
+        }else{
+            document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
+                    clock('/PlayerLogin',5)
+               } 
         </script>
     </form>
 </body>
