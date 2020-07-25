@@ -26,6 +26,7 @@
                 playerlogin = PlayerLogin(User,Password)
                 if(!playerlogin[0]){
                     document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
+                    clock('/PlayerLogin',5)
                 }else{
                     ShowPlugins(User,Password)
                 }
