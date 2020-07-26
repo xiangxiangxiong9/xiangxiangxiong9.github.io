@@ -11,13 +11,13 @@
         </div>
         <div>
             <h>请输入玩家名  </h>
-        <input onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-onkeydown="if(event.keyCode==13)event.keyCode=9" id="User">
+        <input type="text" id="username"  name="username"  autocomplete="off"><!--onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+onkeydown="if(event.keyCode==13)event.keyCode=9" -->
         </div>
         <div>
             <h>请输入密码    </h>
-        <input onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-onkeydown="if(event.keyCode==13)event.keyCode=9" id="Password">
+        <input type="password" name="password1" style="display:none"/> 
+        <input type="password" name="password" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus="autofocus"/>   
         </div>
         <time id="time"></time>
         <script src="/js/crypto-js.js"></script>
