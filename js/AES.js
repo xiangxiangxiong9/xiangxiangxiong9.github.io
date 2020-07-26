@@ -1,6 +1,6 @@
 function Aesin(aes){
     const iv = "1506";
-	Random = random(0,15);
+	Random = random(0,3);
     function randomString(len){
         len = len || 32;
         var $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
