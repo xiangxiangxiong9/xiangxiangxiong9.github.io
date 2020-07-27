@@ -18,25 +18,19 @@
         <script src="/js/cookie.js"></script>
         <script src="/js/clock_jump.js"></script>
         <script type="text/javascript">
-            var User = ''
-            var Password = ''
-            aes = ReadCookie('UserToken')
+            UserToken = ReadCookie('UserToken')
             if(aes != ''){
-            aes = Aesout(aes)
-            aes = aes.split(",")
-            for(var i = 0;i < aes.length;i++)
-                this[aes[i].split(" = ")[0]] = aes[i].split(" = ")[1];
-                playerlogin = PlayerLogin(User,Password)
+                playerlogin = PlayerLogin('UserToken',UserToken)
                 if(!playerlogin[0]){
-                    document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
+                    document.getElementById("plugins").innerHTML = '登录失败，请重新登录<br>登录失败原因:' + playerlogin[1];
                     clock('/PlayerLogin',5)
                 }else{
                     ShowPlugins(User,Password)
                 }
-        }else{
-            document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
-                    clock('/PlayerLogin',5)
-               } 
+            }else{
+                document.getElementById("plugins").innerHTML = '登录失败，请重新登录<br>登录失败原因: 没有登录过或数据已过期';
+                        clock('/PlayerLogin',5)
+                } 
         </script>
     </form>
 </body>

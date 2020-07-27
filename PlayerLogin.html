@@ -16,8 +16,8 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" -->
         </div>
         <div>
             <h>请输入密码    </h>
-        <input type="password" name="password1" style="display:none"/> 
-        <input type="password" name="password" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus="autofocus"/>   
+        <input type="password" id="password1" style="display:none"/> 
+        <input type="password" id="password" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus="autofocus"/>   
         </div>
         <time id="time"></time>
         <script src="/js/crypto-js.js"></script>
@@ -28,34 +28,24 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" -->
         <script src="/js/clock_jump.js"></script>
         <script src="/js/AES.js"></script>
         <script type="text/javascript">
-            var User = ''
-            var Password = ''
-            aes = ReadCookie('UserToken')
-            if(aes != ''){
-            aes = Aesout(aes)
-            aes = aes.split(",")
-            for(var i = 0;i < aes.length;i++)
-                this[aes[i].split(" = ")[0]] = aes[i].split(" = ")[1];
-            playerlogin = PlayerLogin(User,Password)
-            if(playerlogin[0]){
-                SaveCookie('User',User,'30')
-                SaveCookie('Password',Password,'30')
-                document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
-                clock(document.referrer,5)
+            UserToken = ReadCookie('UserToken');
+            if(UserToken != ''){
+                playerlogin = PlayerLogin('UserToken',UserToken)
+                if(playerlogin[0]){
+                    SaveCookie('UserToken',playerlogin[1], '30');
+                    document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+                    clock(document.referrer,5);
             }
-        }else{
-            playerlogin = [false,"Unlogin"]
-        }
+            }else{
+                playerlogin = [false,"Unlogin"]
+            }
             function login(loged){
                 if(loged){
                     alert("你已经登陆过了！")
                 }else{
-                playerlogin = PlayerLogin(document.getElementById("User").value,document.getElementById("Password").value)
+                playerlogin = PlayerLogin(document.getElementById("username").value,document.getElementById("password").value)
                 if(playerlogin[0]){
-                    aes = ["User = " + document.getElementById("User").value,"Password = " + document.getElementById("Password").value]
-                    aes = aes.join(",")
-                    aes = Aesin(aes)
-                    SaveCookie('UserToken',aes,'30')
+                    SaveCookie('UserToken',playerlogin[1],'30')
                     document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
                     clock(document.referrer,5)
                 }else{
