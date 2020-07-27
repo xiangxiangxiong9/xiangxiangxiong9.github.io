@@ -19,7 +19,7 @@
         <script src="/js/clock_jump.js"></script>
         <script type="text/javascript">
             UserToken = ReadCookie('UserToken')
-            if(aes != ''){
+            if(UserToken != ''){
                 playerlogin = PlayerLogin('UserToken',UserToken)
                 if(!playerlogin[0]){
                     document.getElementById("plugins").innerHTML = '登录失败，请重新登录<br>登录失败原因:' + playerlogin[1];
