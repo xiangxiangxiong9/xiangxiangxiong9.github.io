@@ -1,5 +1,7 @@
-function ShowPlugins(User,Password){
-	playerlogin = PlayerLogin(User,Password)
+function ShowPlugins(User,Password,ForceLogin){
+	if(!ForceLogin){
+		playerlogin = PlayerLogin(User,Password)
+	}
     if(!playerlogin[0]){
     	document.getElementById("plugins").innerHTML = '登录失败，请重新登录';
     }else{
