@@ -22,13 +22,13 @@
             if(UserToken != ''){
                 playerlogin = PlayerLogin('UserToken',UserToken)
                 if(!playerlogin[0]){
-                    document.getElementById("plugins").innerHTML = '登录失败，请重新登录<br>登录失败原因:' + playerlogin[1];
+                    document.getElementById("plugins").innerHTML = '<p style="color:white;background:#FF0000">登录失败，请重新登录</p><p style="color:white;background:#FF00FF">登录失败原因:' + playerlogin[1] + '</p>';
                     clock('/PlayerLogin',5)
                 }else{
                     ShowPlugins(User,Password)
                 }
             }else{
-                document.getElementById("plugins").innerHTML = '登录失败，请重新登录<br>登录失败原因: 没有登录过或数据已过期';
+                document.getElementById("plugins").innerHTML = '<p style="color:white;background:#FF0000">登录失败，请重新登录</p><p style="color:white;background:#FF00FF">登录失败原因:' + '没有登录过或数据已过期' + '</p>';
                         clock('/PlayerLogin',5)
                 } 
         </script>
