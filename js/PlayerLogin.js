@@ -30,9 +30,10 @@ function PlayerLogin(type,arg1,arg2){
 	}else{
 		if(type == 'UserPassword'){
 			User = arg1;
-			Password=arg2;
+			Password = arg2;
 		}else{
 			back = [Login,'无效的验证方式'];
+			return back;
 		}
 	}
 	if(realpassword == '' && salt == ''){
