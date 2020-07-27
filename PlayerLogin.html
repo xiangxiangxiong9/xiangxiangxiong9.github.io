@@ -49,7 +49,7 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" -->
                     document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
                     clock(document.referrer,5)
                 }else{
-                    document.getElementById("login").innerHTML = '<PlayerLogin style="color:white;background:#FF0000">登录失败，请重新登录</PlayerLogin><PlayerLogin style="color:white;background:#FF00FF">登录失败原因:' + playerlogin[1] + '</PlayerLogin>';
+                    document.getElementById("login").innerHTML = '<PlayerLogin style="color:white;background:#FF0000">登录失败，请重新登录</PlayerLogin><br><PlayerLogin style="color:white;background:#FF00FF">登录失败原因:' + playerlogin[1] + '</PlayerLogin>';
                     }
                 }
             }
