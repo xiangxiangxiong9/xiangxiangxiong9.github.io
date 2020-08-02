@@ -43,7 +43,7 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" -->
                 if(loged){
                     alert("你已经登陆过了！")
                 }else{
-                playerlogin = PlayerLogin(document.getElementById("username").value,document.getElementById("password").value)
+                playerlogin = PlayerLogin('UserPassword',document.getElementById("username").value,document.getElementById("password").value)
                 if(playerlogin[0]){
                     SaveCookie('UserToken',playerlogin[1],'30')
                     document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
