@@ -6,19 +6,26 @@ function PlayerLogin(type,arg1,arg2){
 		var User = '';
 		var Password = '';
 		if(arg1 != ''){
-			aes = arg1;
+			UserToken = arg1;
 		}else{
 			if(arg2 != ''){
-				aes = arg2;
+				UserToken = arg2;
 			}else{
 				back = [Login,'找不到有效的UserToken'];
 				return back
 			}
 		}
-        aes = Aesout(aes);
-		aes = aes.split(",")[3];
-        for(var i = 0;i < aes.length;i++);
-			this[aes[i].split(" = ")[0]] = aes[i].split(" = ")[1];
+        UserToken = Aesout(UserToken);
+		UserToken = UserToken.split(",");
+        for(var j = 0; j < UserToken.length; j++){
+        	if(UserToken[j].split(" = ")[0] == 'User'){
+        		User = UserToken[j].split(" = ")[1] 
+        	}else{
+        		if(UserToken[j].split(" = ")[0] == 'Password'){
+        			Password = UserToken[j].split(" = ")[1]
+        		}
+        	}
+		};
 	}else{
 		if(type == 'UserPassword'){
 			User = arg1;
@@ -43,9 +50,9 @@ function PlayerLogin(type,arg1,arg2){
     			/*console.log("登录成功");
     			alert("登录成功");*/
 				Login = true;
-				aes = ["User = " + User,"Password = " + Password]
-                aes = aes.join(",")
-                aes = Aesin(aes)
+				UserToken = ["User = " + User,"Password = " + Password]
+                UserToken = UserToken.join(",")
+                UserToken = Aesin(UserToken)
     			back = [Login,UserToken,User,Password];
     		}else{
     			/*console.log("登录失败，请重试");

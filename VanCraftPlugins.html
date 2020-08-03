@@ -17,6 +17,7 @@
         <script src="/js/ReadVaule.js"></script>
         <script src="/js/cookie.js"></script>
         <script src="/js/clock_jump.js"></script>
+        <script src="/js/random.js"></script>
         <script type="text/javascript">
             UserToken = ReadCookie('UserToken')
             if(UserToken != ''){
@@ -25,7 +26,7 @@
                     document.getElementById("plugins").innerHTML = '<PlayerLogin style="color:white;background:#FF0000">登录失败，请重新登录</PlayerLogin><br><PlayerLogin style="color:white;background:#FF00FF">登录失败原因: ' + playerlogin[1] + '</PlayerLogin><br>';
                     clock('/PlayerLogin',5)
                 }else{
-                    ShowPlugins(User,Password)
+                    ShowVanCraftPlugins(playerlogin[2],playerlogin[3])
                 }
             }else{
                 document.getElementById("plugins").innerHTML = '<PlayerLogin style="color:white;background:#FF0000">登录失败，请重新登录</PlayerLogin><br><PlayerLogin style="color:white;background:#FF00FF">登录失败原因: ' + '你可能没有登录过或登录保存数据过期或已被清除' + '</PlayerLogin><br>';
