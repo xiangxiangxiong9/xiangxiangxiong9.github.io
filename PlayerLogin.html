@@ -46,7 +46,6 @@ onkeydown="if(event.keyCode==13)event.keyCode=9" -->
                 playerlogin = PlayerLogin('UserPassword',document.getElementById("username").value,document.getElementById("password").value)
                 if(playerlogin[0]){
                     SaveCookie('UserToken',playerlogin[1],'30')
-                    alert(playerlogin[1])
                     document.getElementById("login").innerHTML = '登录成功，正在返回之前的页面...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
                     clock(document.referrer,5)
                 }else{
