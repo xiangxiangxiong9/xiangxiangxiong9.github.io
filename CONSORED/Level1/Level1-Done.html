@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Level1</title>
     <script src="/js/NOBACK.js"></script>
 </head>
@@ -19,7 +20,7 @@
             if (cookie_val = 'A'){
                 document.getElementById("text").innerHTML = "正在跳转至下一题...";
                 document.title = "正在跳转到下一题..."
-                clock('/Level2/Level2',5)
+                clock('../Level2/Level2',5)
             }else{
                 if (cookie_val = 'B'){
                     document.getElementById("text").innerHTML = "你选择的是B，但是你为什么要来A页？";
