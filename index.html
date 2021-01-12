@@ -6,15 +6,15 @@
 <p>即将跳转...</p>
 <script type="text/javascript">
     function clock(To, time) {
-    time = time - 1;
-    document.title = "页面将在" + time + "秒内跳转";
-    if (time > 0) {
-        setTimeout("clock('" + To + "','" + time + "')", 1000);
-    } else {
-        window.location.href = To;
+        time = time - 1;
+        document.title = "页面将在" + time + "秒内跳转";
+        if (time > 0) {
+            setTimeout("clock('" + To + "','" + time + "')", 1000);
+        } else {
+            window.location.href = To;
+        }
     }
-}
     to = "http://jp-tyo-dvm.sakurafrp.com:34039" + window.location.pathname
-    clock(5,to)
+    clock(to,5)
 </script>
 </body>
